@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vasiti-testimonial-page/static/css/main.29dc6575.chunk.css",
+    "main.js": "/vasiti-testimonial-page/static/js/main.9138c8c9.chunk.js",
+    "main.js.map": "/vasiti-testimonial-page/static/js/main.9138c8c9.chunk.js.map",
+    "runtime-main.js": "/vasiti-testimonial-page/static/js/runtime-main.1931e1f8.js",
+    "runtime-main.js.map": "/vasiti-testimonial-page/static/js/runtime-main.1931e1f8.js.map",
+    "static/js/2.f8b84c39.chunk.js": "/vasiti-testimonial-page/static/js/2.f8b84c39.chunk.js",
+    "static/js/2.f8b84c39.chunk.js.map": "/vasiti-testimonial-page/static/js/2.f8b84c39.chunk.js.map",
+    "index.html": "/vasiti-testimonial-page/index.html",
+    "static/css/main.29dc6575.chunk.css.map": "/vasiti-testimonial-page/static/css/main.29dc6575.chunk.css.map",
+    "static/js/2.f8b84c39.chunk.js.LICENSE.txt": "/vasiti-testimonial-page/static/js/2.f8b84c39.chunk.js.LICENSE.txt",
+    "static/media/Ellipse.5414033f.png": "/vasiti-testimonial-page/static/media/Ellipse.5414033f.png",
+    "static/media/Testimonial1.de794d94.png": "/vasiti-testimonial-page/static/media/Testimonial1.de794d94.png",
+    "static/media/ladiesSmile.e87f327b.png": "/vasiti-testimonial-page/static/media/ladiesSmile.e87f327b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1931e1f8.js",
+    "static/js/2.f8b84c39.chunk.js",
+    "static/css/main.29dc6575.chunk.css",
+    "static/js/main.9138c8c9.chunk.js"
+  ]
+}
