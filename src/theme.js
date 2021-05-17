@@ -28,16 +28,16 @@ const theme = createMuiTheme({
     lg: 1200,
     xl: 1920,
   },
-  overrides: {
-    // Style sheet name ⚛️
-    MuiMobileStepper: {
-      // Name of the rule
-      dot: {
-        // Some CSS
-        backgroundColor: "white",
-      },
-    },
-  },
+  // overrides: {
+  //   // Style sheet name ⚛️
+  //   MuiMobileStepper: {
+  //     // Name of the rule
+  //     dot: {
+  //       // Some CSS
+  //       backgroundColor: "white",
+  //     },
+  //   },
+  // },
 });
 
 export default theme;
