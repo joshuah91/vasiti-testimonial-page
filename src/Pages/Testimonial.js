@@ -1,7 +1,7 @@
-import react from "react";
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { MenuItem, MenuList, Grid, Button, Paper, Typography, Input } from "@material-ui/core";
+import { MenuItem, MenuList, Grid, Button, Typography, Input } from "@material-ui/core";
 import Navbar from "../Component/Navbar";
 import Testimonial1 from "../Images/Testimonial1.png";
 import Ellipse from "../Images/Ellipse.png";
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   subNavBar: {
     marginTop: "5rem",
     border: "1px solid #D3D3D3",
+    [theme.breakpoints.down("md")]: {
+      border: "none",
+    },
   },
   menuList: {
     display: "flex",
@@ -39,21 +42,141 @@ const useStyles = makeStyles((theme) => ({
     flex: "1",
     outline: "none",
     [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  firstRow: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginLeft: "5rem",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
       flexDirection: "column",
-      flex: "none",
-      width: "100%",
       alignItems: "center",
+      width: "100%",
+      marginLeft: "0px",
+    },
+  },
+  subFirstRow: {
+    marginTop: "8rem",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "4rem",
+      marginLeft: theme.spacing(2),
+    },
+  },
+  firstRowBody: {
+    fontWeight: "700",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+      fontWeight: "700",
+      marginBottom: "30px",
+    },
+  },
+  firstRowBody2: {
+    fontweight: "400",
+    fontStyle: "normal",
+    fontSize: "18px",
+    color: "#494949",
+    letterSpacing: "1px",
+    marginTop: "2rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+    },
+  },
+  firstRowImage: {
+    width: "90%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      height: "50%",
     },
   },
   testimonyHeader: {
     backgroundColor: "#222222",
-    width: "100vw",
+    width: "100%",
     height: "636px",
     marginTop: "-4px",
     border: "1px solid #222222",
     display: "flex",
     flexDirection: "row",
     // justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+      width: "95%",
+      alignItems: "center",
+      height: "auto",
+    },
+  },
+  testHeadImage: {
+    marginLeft: "40px",
+    marginTop: "30px",
+    background: `url(${Ellipse})`,
+    height: "90%",
+    width: "90%",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "0px",
+    },
+  },
+  testHeader: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "space-around",
+    marginLeft: "50px",
+    [theme.breakpoints.down("sm")]: {
+      // display: "flex",
+      // flexDirection: "column",
+      // alignItems: "center",
+      // width: "50%",
+      marginLeft: "-30px",
+    },
+  },
+  customerButton: {
+    color: "#fff",
+    border: "1px solid #fff",
+    borderRadius: "4px",
+    width: "100px",
+    marginTop: "5px",
+    paddingRight: "10px",
+    paddingLeft: "10px",
+    paddingTop: "5px",
+    paddingBottom: "5px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "10px",
+      width: "40%",
+    },
+  },
+  testHeadBody1: {
+      color: "#fff",
+      marginTop: "6rem",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "30px",
+      },
+  },
+  testHeadBody2: {
+      fontweight: "400",
+      fontStyle: "normal",
+      fontSize: "18px",
+      color: "#fff",
+      letterSpacing: "1px",
+      marginTop: "40px",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "12px",
+      },
+  },
+  shareStory: {
+    fontweight: "400",
+    fontStyle: "normal",
+    fontSize: "18px",
+    color: "#fff",
+    letterSpacing: "1px",
+    marginTop: "50px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "0px",
+      fontSize: "12px",
+    },
   },
   testimonyHeade: {
     backgroundColor: "#FFF8F5",
@@ -64,6 +187,35 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+      alignItems: "center",
+      marginTop: "10px",
+      height: "auto",
+      width: "95%",
+    },
+  },
+  heade1: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "start",
+    marginLeft: "60px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "10px",
+    },
+  },
+  shareStory2: {
+    fontweight: "400",
+    fontStyle: "normal",
+    fontSize: "18px",
+    color: "#FF5C00",
+    letterSpacing: "1px",
+    marginTop: "70px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "-30px",
+      fontSize: "14px",
+    },
   },
   testimonyArea: {
     backgroundColor: "#fff",
@@ -73,6 +225,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      height: "auto",
+      alignItems: "center",
+      alignSelf: "auto",
+      justifyContent: "space-around",
+      marginLeft: "-30px",
+    },
   },
   footer: {
     backgroundColor: "#25201D",
@@ -82,7 +243,61 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    marginTop: "109px",
     color: "#fff",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+      height: "auto",
+      alignItems: "center",
+      marginTop: "0px",
+      marginLeft: "-30px",
+    },
+  },
+  footer2: {
+    backgroundColor: "#25201D",
+    width: "100vw",
+    height: "379px",
+    border: "1px solid #25201D",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    color: "#fff",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column",
+      height: "auto",
+      alignItems: "center",
+      marginTop: "0px",
+      marginLeft: "-30px",
+    },
+  },
+  phoneBanner: {
+    marginLeft: "80px", 
+    marginTop: "-45px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "10px",
+      marginLeft: "-35px",
+      width: "100%",
+    },
+  },
+  celeIcon: {
+    marginTop: "115px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  member: {
+    color: "#fff",
+    marginTop: "80px",
+    lineHeight: "40px",
+    size: "40px",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    LetterSpacing: "-0.03em",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "10px",
+    },
   },
   icons: {
     display: "flex",
@@ -92,29 +307,44 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "45px",
   },
   searchInput: {
-    color: "#222222",
-    background: "#fff",
-    height: "35px",
-    width: "50%",
+    color: "#FFFFFF",
+    lineHeight: "16.41px",
+    background: "rgba(255, 255, 255, 0.2)",
+    height: "52px",
+    width: "60%",
     marginTop: "40px",
-    border: "1px solid #222222",
-    borderRadius: "4px",
-    fontSize: "18px",
-    font: "Roboto",
+    borderRadius: "6px",
+    fontSize: "14px",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    paddingLeft: "15px",
+    [theme.breakpoints.down("sm")]: {
+      width: "110%",
+      marginLeft: "-40px",
+    },
   },
   searchButton: {
-    color: "#222222",
-    border: "1px solid #222222",
+    color: "#EF580 20%",
+    boxShadow: "1px 4px 8px rgba(239, 88, 3, 0.2)",
     borderRadius: "4px",
     background: "#fff",
     font: "Roboto",
     fontSize: "14px",
-    marginTop: "-35px",
-    width: "15%",
-    height: "35px",
+    padding: "8px, 24px, 8px, 24px",
+    marginTop: "-47px",
+    width: "20%",
+    height: "42px",
     fontWeight: "bold",
-    marginLeft: "35%",
-  }
+    marginLeft: "39%",
+    [theme.breakpoints.down("sm")]: {
+      width: "40%",
+      fontSize: "12px",
+      marginLeft: "140px",
+      height: "50px",
+      marginTop: "-52px",
+    },
+  },
 }));
 
 
@@ -123,7 +353,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      {/*navbar grid*/}
+      {/* navbar grid */}
       <Navbar />
       <Grid item xs={12} container className={classes.subNavBar}>
         <MenuList className={classes.menuList}>
@@ -147,105 +377,46 @@ const Testimonial = () => {
           </MenuItem>
         </MenuList>
       </Grid>
-      <Grid item xs={11} container style={{
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      marginLeft: "5rem",
-    }}>
-      <Grid item xs={6} style={{
-        marginTop: "8rem",
-      }}>
-        <Typography variant="h3" style={{
-          fontWeight: "700",
-        }}>
-          Amazing <br />
+      <Grid item xs={11} container className={classes.firstRow}>
+      <Grid item xs={6} className={classes.subFirstRow}>
+        <Typography variant="h3" className={classes.firstRowBody}>
+          Amazing
           Experiences from Our Wonderful Customers
         </Typography>
-        <Typography variant="body1"style={{
-          fontweight: "400",
-          fontStyle: "normal",
-          fontSize: "18px",
-          color: "#494949",
-          letterSpacing: "1px",
-          marginTop: "2rem",
-        }}>
-          Here is what customers and vendors are saying about <br /> us,
+        <Typography variant="body1" className={classes.firstRowbody2}>
+          Here is what customers and vendors are saying about us,
           you can share your stories with us too.
         </Typography>
       </Grid>
-      <Grid item xs={5} style={{
-        marginRight: "80px",
-        marginTop: "1rem",
-      }}>
-        <img src={Testimonial1} alt="Testimonial Logo 1" style={{ width: "100%" }} />
+      <Grid item xs={5} sm={5} style={{ marginRight: "70px", marginTop: "1rem" }}>
+        <img src={Testimonial1} alt="Testimonial Logo 1" className={classes.firstRowImage} />
       </Grid>
       </Grid>
-      <Grid item xs={12} container className={classes.testimonyHeader}>
-        <Grid item xs={6} style={{
-          marginLeft: "40px",
-          marginTop: "30px",
-          background: `url(${Ellipse})`,
-          height: "90%",
-          width: "90%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}>
+      <Grid item xs={12} sm={12} container className={classes.testimonyHeader}>
+        <Grid item xs={6} className={classes.testHeadImage}>
           <img src={ladiesSmile} alt="Ladies Smiling" style={{ width: "100%", height: "100%" }} />
         </Grid>
-        <Grid item xs={5} container style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-          marginLeft: "50px",
-        }}>
-          <Typography variant="h4" style={{
-            color: "#fff",
-            marginTop: "6rem",
-          }}>
+      <Grid item xs={5} container className={classes.testHeader}>
+          <Typography variant="h4" className={classes.testHeadBody1}>
             Tolu & Joy's Experience
           </Typography>
-          <Typography variant="button" style={{
-            color: "#fff",
-            border: "1px solid #fff",
-            borderRadius: "4px",
-            width: "100px",
-            marginTop: "-40px",
-            paddingRight: "10px",
-            paddingLeft: "10px",
-            paddingTop: "5px",
-            paddingBottom: "5px",
-          }}>
+          <Typography variant="button" className={classes.customerButton}>
             Customer
           </Typography>
-          <Typography variant="body1"style={{
-            fontweight: "400",
-            fontStyle: "normal",
-            fontSize: "18px",
-            color: "#fff",
-            letterSpacing: "1px",
-            marginTop: "-30px",
-        }}>
-          I had the best experience shopping with vasiti.<br />
-          Usability of the website was great, very good<br />
-          customer service, an all round great<br />
-          experience. I would definitely be coming back!<br />
-          I had the best experience shopping with vasiti.<br />
-          Usability of the website was great, very good<br />
-          customer service, an all round great<br />
-          experience. I would definitely be coming back!<br /> 
+          <Typography variant="body1" className={classes.testHeadBody2}>
+          I had the best experience shopping with vasiti.
+          Usability of the website was great, very good
+          customer service, an all round great
+          experience. I would definitely be coming back!
+          I had the best experience shopping with vasiti.
+          Usability of the website was great, very good
+          customer service, an all round great
+          experience. I would definitely be coming back! 
         </Typography>
-        <Typography variant="body1"style={{
-            fontweight: "400",
-            fontStyle: "normal",
-            fontSize: "18px",
-            color: "#fff",
-            letterSpacing: "1px",
-            marginTop: "-30px",
-        }}>
+        <Typography variant="body1" className={classes.shareStory}>
           SHARE YOUR OWN STORY!
         </Typography>
-        <img src={Vector} alt="Vector" width="275" style={{marginTop: "-67px" }} />
+        <img src={Vector} alt="Vector" width="250" style={{marginTop: "-2px" }} />
         </Grid>
       </Grid>
       <Grid item xs={12} container className={classes.testimonyArea}>
@@ -254,7 +425,6 @@ const Testimonial = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "start",
-
         }}>
             <img src={joseph} alt="Joseph Ike" style={{ width: "200px", height: "200px", background: `url(.png)` }} />
             <Typography variant="body1"style={{
@@ -313,7 +483,7 @@ const Testimonial = () => {
             fontSize: "16px",
             color: "#474747",
             letterSpacing: "0.02em",
-            lineHeight: "24px",
+            // lineHeight: "24px",
             marginTop: "5px",
           }}>
           Aliqua id fugiat nostrud irure
@@ -727,12 +897,7 @@ const Testimonial = () => {
         </Grid>
        </Grid>
        <Grid item xs={12} container className={classes.testimonyHeade}>
-        <Grid item xs={5} container style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "start",
-          marginLeft: "60px",
-        }}>
+        <Grid item xs={5} container className={classes.heade1}>
           <Typography variant="h4" style={{
             color: "#242120",
             marginTop: "6rem",
@@ -760,26 +925,19 @@ const Testimonial = () => {
             letterSpacing: "2px",
             marginTop: "30px",
         }}>
-          I had the best experience shopping with vasiti.<br />
-          Usability of the website was great, very good<br />
-          customer service, an all round great<br />
-          experience. I would definitely be coming back!<br />
-          I had the best experience shopping with vasiti.<br />
-          Usability of the website was great, very good<br />
-          customer service, an all round great<br />
-          experience. I would definitely be coming back!<br /> 
+          I had the best experience shopping with vasiti.
+          Usability of the website was great, very good
+          customer service, an all round great
+          experience. I would definitely be coming back!
+          I had the best experience shopping with vasiti.
+          Usability of the website was great, very good
+          customer service, an all round great
+          experience. I would definitely be coming back!
         </Typography>
-        <Typography variant="body1"style={{
-            fontweight: "400",
-            fontStyle: "normal",
-            fontSize: "18px",
-            color: "#FF5C00",
-            letterSpacing: "1px",
-            marginTop: "70px",
-        }}>
+        <Typography variant="body1" className={classes.shareStory2}>
           SHARE YOUR OWN STORY!
         </Typography>
-        <img src={Vector} alt="Vector" width="275" style={{ marginTop: "-1px" }} />
+        <img src={Vector} alt="Vector" width="225" style={{ marginTop: "-1px" }} />
         </Grid>
         <Grid item xs={6} style={{
           marginLeft: "30px",
@@ -1188,9 +1346,9 @@ const Testimonial = () => {
           </Typography>
         </Grid>
        </Grid>
-       <Grid item xs={12} container className={classes.footer} style={{ marginTop: "109px" }}>
+       <Grid item xs={12} container className={classes.footer}>
         <Grid item xs={6}>
-          <img src={banner} alt="Phone banner" style={{ marginLeft: "80px", marginTop: "-45px" }} />
+          <img src={banner} alt="Phone banner" className={classes.phoneBanner} />
         </Grid>
         <Grid item xs={5} container style={{
           display: "flex",
@@ -1201,18 +1359,10 @@ const Testimonial = () => {
             display: "flex",
             flexDirection: "row",
           }}>
-            <Typography variant="h4" style={{
-              color: "#fff",
-              marginTop: "80px",
-              lineHeight: "40px",
-              size: "40px",
-              fontStyle: "normal",
-              fontWeight: "bold",
-              LetterSpacing: "-0.03em",
-            }}>
+            <Typography variant="h4" className={classes.member}>
               Be a member<br /> of our community
             </Typography>
-            <img src={cele} alt="celebration icon" style={{ marginTop: "115px" }} />
+            <img src={cele} alt="celebration icon" className={classes.celeIcon} />
           </Grid>
           <Typography variant="body1"style={{
             font: "Roboto",
@@ -1224,13 +1374,13 @@ const Testimonial = () => {
             letterSpacing: "0.02em",
             marginTop: "16px",
         }}>
-            We’d make sure you’re always first to know what’s<br />happening on Vasiti—thus, the world. 
+            We’d make sure you’re always first to know what’s happening on Vasiti—thus, the world. 
         </Typography>
-        <input type="text" id="searcher" className={classes.searchInput} />
-        <Button className={classes.searchButton}>Search</Button>
+        <Input type="text" id="searcher" className={classes.searchInput} placeholder="enter your email address"></Input>
+        <Button className={classes.searchButton}>Subscribe</Button>
         </Grid>
       </Grid>
-      <Grid item xs={12} container className={classes.footer}>
+      <Grid item xs={12} container className={classes.footer2}>
         <Grid item xs={2} style={{
           display: "flex",
           flexDirection: "column",
@@ -1294,7 +1444,7 @@ const Testimonial = () => {
             <TwitterIcon />
             <LinkedInIcon />
           </div>
-          <Typography variant="body1" style={{ marginTop: "30px" }}>
+          <Typography variant="body1" style={{ marginTop: "30px", marginBottom: "10px" }}>
             Email Newsletter
           </Typography>
         </Grid>
