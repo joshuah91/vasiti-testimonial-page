@@ -6,7 +6,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../Images/logo.png";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -140,9 +140,9 @@ const Navbar = (props) => {
       <Grid container xs={12}>
         <Grid item xs={0} sm={1} />
         <Grid item container xs={12} sm={10} style={{ display: "flex" }}>
-          <NavLink to="/" className={classes.logo}>
+          <div className={classes.logo}>
             <img src={logo} alt="Vasiti logo" style={{ width: "100px" }} />
-          </NavLink>
+          </div>
           <Grid className={isOpen ? classes.gridMobile : classes.gridContainer}>
             <MenuList
               // className={isOpen ? classes.menuButtonMobile : classes.menuList}
@@ -151,10 +151,10 @@ const Navbar = (props) => {
               <MenuItem component={Link} to="/" onClick={closeMobileMenu}>
                 ABOUT US
               </MenuItem>
-              <MenuItem component={Link} to="/signup" onClick={closeMobileMenu}>
+              <MenuItem component={Link} to="/ShareStory" onClick={closeMobileMenu}>
                 STORIES
               </MenuItem>
-              <MenuItem component={Link} to="/login" onClick={closeMobileMenu}>
+              <MenuItem component={Link} to="/" onClick={closeMobileMenu}>
                 CONTACT
               </MenuItem>
             </MenuList>
@@ -162,12 +162,12 @@ const Navbar = (props) => {
               // className={isOpen ? classes.menuButtonMobile2 : classes.menuList2}
               className={classes.menuList2}
             >
-              <MenuItem component={Link} to="/login" onClick={closeMobileMenu}>
+              <MenuItem component={Link} to="/" onClick={closeMobileMenu}>
                 LOG IN
               </MenuItem>
               <MenuItem
                 component={Link}
-                to="/signup"
+                to="/"
                 className={classes.button}
                 onClick={closeMobileMenu}
               >
